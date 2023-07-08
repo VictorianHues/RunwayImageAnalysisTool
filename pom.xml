@@ -7,6 +7,14 @@
     <groupId>com.victoria.runway</groupId>
     <artifactId>runwayimageanalysis</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.6.0-1.5.8</version>
+        </dependency>
+    </dependencies>
+
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
