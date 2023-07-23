@@ -45,8 +45,8 @@ This is one of my first serious projects that I'm working on out of my own inter
 
 ## Roadmap
 Basic Functionality
-- [ ] Image color adjustment
-- [ ] Body detection
+- [x] Image color adjustment
+- [x] Body detection
 - [ ] Image modification and size standardization
 - [ ] Collective image averaging
 - [ ] Color isolation

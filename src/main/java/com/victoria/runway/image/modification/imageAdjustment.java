@@ -6,8 +6,13 @@ import org.opencv.imgproc.Imgproc;
 
 
 public class imageAdjustment {
-    public static Mat colorAdjustment(Mat inputImage, int colorConversionCode) throws Exception {
+    public static Mat colorAdjustment(Mat inputImage, int colorConversionCode) {
         try {
+            // Check if the image was loaded successfully
+            if (inputImage.empty()) {
+                throw new IllegalArgumentException("Error: Unable to load the given image.");
+            }
+
             // Create the empty destination matrix
             Mat convertedImage = new Mat();
 
@@ -17,8 +22,8 @@ public class imageAdjustment {
             return convertedImage;
         }
         catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-            throw new Exception(e);
+            e.printStackTrace();
+            return inputImage;
         }
     }
 }
