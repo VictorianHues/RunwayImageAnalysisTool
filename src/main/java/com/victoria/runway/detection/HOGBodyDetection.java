@@ -1,20 +1,21 @@
 package com.victoria.runway.detection;
 
-import com.victoria.runway.image.modification.imageAdjustment;
+import com.victoria.runway.image.modification.ImageAdjustment;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.HOGDescriptor;
 
-public class HumanBodyDetection {
+public class HOGBodyDetection {
     private Mat originalImage;
     private Mat processedImage;
+    private Mat resizedImage;
     private MatOfRect detections;
     private MatOfDouble weights;
     private HOGDescriptor hogDescriptor;
     private double hitThreshold;
 
-    public HumanBodyDetection(String imagePath, double hitThreshold) {
+    public HOGBodyDetection(String imagePath, double hitThreshold) {
         try {
             this.hitThreshold = hitThreshold;
 
@@ -44,7 +45,7 @@ public class HumanBodyDetection {
 
     public void detectHumanBodies() {
         try {
-            this.processedImage = imageAdjustment.colorAdjustment(this.processedImage,Imgproc.COLOR_RGB2GRAY);
+            this.processedImage = ImageAdjustment.colorAdjustment(this.processedImage,Imgproc.COLOR_RGB2GRAY);
 
             this.hogDescriptor.detectMultiScale(this.processedImage,
                     this.detections,
@@ -62,6 +63,8 @@ public class HumanBodyDetection {
 
     public Rect findLargestBody() {
         try {
+            System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+
             // Check if human bodies were detected before finding the largest body
             if (this.detections.empty()) {
                 detectHumanBodies();
@@ -145,10 +148,11 @@ public class HumanBodyDetection {
 
             Mat outputImage = new Mat(originalImage, cropRegion);
 
+            this.resizedImage = outputImage;
             // Save the output image to the specified path
-            Imgcodecs.imwrite(outputImagePath, outputImage);
+            //Imgcodecs.imwrite(outputImagePath, outputImage);
 
-            System.out.println("Image with the largest human body is saved at: " + outputImagePath);
+            //System.out.println("Image with the largest human body is saved at: " + outputImagePath);
         } catch (Exception e) {
             // Handle any exceptions during drawing the largest body
             e.printStackTrace();

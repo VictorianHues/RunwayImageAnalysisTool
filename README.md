@@ -47,8 +47,8 @@ This is one of my first serious projects that I'm working on out of my own inter
 Basic Functionality
 - [x] Image color adjustment
 - [x] Body detection
-- [ ] Image modification and size standardization
-- [ ] Collective image averaging
+- [x] Image modification and size standardization
+- [x] Collective image averaging
 - [ ] Color isolation
 - [ ] Body part recognition
 - [ ] Build Tests

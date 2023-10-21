@@ -5,7 +5,7 @@ import org.opencv.imgproc.Imgproc;
 
 
 
-public class imageAdjustment {
+public class ImageAdjustment {
     public static Mat colorAdjustment(Mat inputImage, int colorConversionCode) {
         try {
             // Check if the image was loaded successfully
