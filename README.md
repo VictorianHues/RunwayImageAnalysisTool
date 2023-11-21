@@ -76,6 +76,17 @@ Further Implementation
 - [ ] Machine Learning
 
 
+### Concepts
+
+- Supervised Learning through labeled image data and Regression Models: Identify subject, clothing, and accessories in images.
+- Image Segmentation: Separate subject from background and clothing/accessories from subject.
+- Image Processing for further Image Analysis techniques
+- Edge Detection in color images: Segmentation of clothing and identification of patters, textures, and forms.
+- Detecting Geometric Primitives: Detection of outfit and clothing shape and silhouette.
+- Image averaging: Combination of fashion images to form visual averages of fashion concepts.
+- Connected-Component Labeling: Segmentation technique, edge detection, color detection to determine connected components of outfits.
+
+
 
 ## How to Install and Run
 Currently in Progress...
