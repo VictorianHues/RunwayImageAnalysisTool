@@ -85,6 +85,15 @@ Further Implementation
 - Image averaging: Combination of fashion images to form visual averages of fashion concepts.
 - Connected-Component Labeling: Segmentation technique, edge detection, color detection to determine connected components of outfits.
 
+### Image Concepts
+
+<img src="readme/V_1.jpg" alt="Base" height="500"/>
+<img src="readme/Segmentation.jpg" alt="Segmentation" height="500"/>
+<img src="readme/Color.jpg" alt="Color" height="500"/>
+
+<img src="readme/PatternTexture.jpg" alt="Pattern/Texture" height="500"/>
+<img src="readme/Shape.jpg" alt="Shape" height="500"/>
+<img src="readme/Lines.jpg" alt="Lines" height="500"/>
 
 ## How to Install and Run
 Currently in Progress...
